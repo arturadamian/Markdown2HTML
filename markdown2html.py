@@ -3,11 +3,11 @@ import sys
 import os.path
 from os import path
 
-if len(sys.argv) < 2:
+if len(sys.argv) < 3:
     sys.stdout.write("Usage: ./markdown2html.py README.md README.html\n")
     exit (1)
 elif not path.exists(sys.argv[1]):
-    print("Missing ", sys.argv[1], file=sys.stderr)
+    sys.stdout.write("Missing " + sys.argv[1] + "\n")
     exit (1)
 else:
     exit(0)
