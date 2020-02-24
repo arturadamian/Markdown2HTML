@@ -22,7 +22,7 @@ if __name__=='__main__':
             words = line.split(" ")
             if words[0] in mkd:
                 htmlTag = mkd[words[0]]
-            htmlFile = line.replace(words[0], "{}".format(htrmlTag))
+            htmlFile = line.replace(words[0], "{}".format(htmlTag))
             htmlTag = htmlTag[:-1] + (" {}\n".format(htmlTag))
             y.write(htmlTag)
 
