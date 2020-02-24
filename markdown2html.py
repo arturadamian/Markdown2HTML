@@ -16,4 +16,5 @@ if __name__=='__main__':
     if not path.exists(sys.argv[1]) or not sys.argv[1].endswith('.md'):
         sys.stdout.write("Missing " + sys.argv[1] + "\n")
         exit (1)
-    exit(0)
+    with open(sys.argv[1], mode="r") as f:
+        exit(0)
